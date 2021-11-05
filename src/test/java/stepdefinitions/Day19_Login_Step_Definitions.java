@@ -22,13 +22,13 @@ public class Day19_Login_Step_Definitions {
     @Given("user is on the application page")
     public void user_is_on_the_application_page() {
         Driver.getDriver().get(ConfigReader.getProperty("app_qa_environment"));
-        try{
+        try {
             Thread.sleep(1000);
             loginPage.advancedLink.click();
             Thread.sleep(1000);
             loginPage.proceedLink.click();
             Thread.sleep(1000);
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println("Advanced Link and Proceed Link is not displayed");
         }
 
@@ -54,7 +54,7 @@ public class Day19_Login_Step_Definitions {
 
     @Then("verify the {string} is displayed")
     public void verify_the_is_displayed(String string) {
-        Assert.assertEquals(defaultPage.userId.getText(),string);
+        Assert.assertEquals(defaultPage.userId.getText(), string);
     }
 
 
@@ -80,7 +80,8 @@ public class Day19_Login_Step_Definitions {
 //            loginPage.password.sendKeys(eachCredentials.get(1));
 //            }
 //        }
-//        //OR USA LAMBDA
+
+//        //OR USE LAMBDA
 //        managerCredentials.stream()
 //                .filter(eachCredentials-> !(eachCredentials.get(0).equals("username")))
 //                .forEach(eachCredentials-> {
@@ -88,7 +89,7 @@ public class Day19_Login_Step_Definitions {
 //                    loginPage.password.sendKeys(eachCredentials.get(1));
 //                });
 
-//        3. List<Map<String,String>>
+       // 3. List<Map<String,String>>
         List<Map<String,String>> managerCredentials= credentials.asMaps(String.class,String.class);
         System.out.println(managerCredentials);//[{username=manager, password=Manager1!}]
         for (Map<String,String> eachCredentials:managerCredentials){
@@ -98,64 +99,63 @@ public class Day19_Login_Step_Definitions {
         }
 
     }
-/*
-*BELOW CODE IS USED TO LOGIN USING EXCEL SHEET
-* import ExcelUtil
-* Delete LoginPage and DefaultPage cause there are already in the top of the page
-* Delete @Test annotation and adminLoginTest method signature
-* Add exception to the method signature for setUp method
-* */
-    ExcelUtil excelUtil;
-    List<Map<String, String>>  testData;
-
-    public void setUp() throws InterruptedException {
-        Driver.getDriver().get(ConfigReader.getProperty("app_qa_environment"));
-        loginPage = new LoginPage();
-        Thread.sleep(1000);
-        try{
-            Thread.sleep(1000);
-            loginPage.advancedLink.click();
-            Thread.sleep(1000);
-            loginPage.proceedLink.click();
-            Thread.sleep(1000);
-        }catch (Exception e){
-            System.out.println("Advanced Link and Proceed Link is not displayed");
-        }
-    }
-
-    @Given("user log in the application using excel admin")
-    public void user_log_in_the_application_using_excel_admin() throws InterruptedException {
-            String path ="./src/test/resources/testdata/smoketestdata.xlsx";
-            String sheetName="admin_login_info";
-            excelUtil= new ExcelUtil(path,sheetName);
-
-            testData=excelUtil.getDataList();
-            System.out.println(testData);//[{password=Techproed123!, username=admin}]
-
-            for(Map<String,String> eachData : testData ){//eachData represent each username-password pairs
-                setUp();//login in each loop
-                loginPage.username.sendKeys(eachData.get("username"));//admin
-                loginPage.password.sendKeys(eachData.get("password"));//Techproed123!
-                loginPage.loginButton.click();
-        }
-    }
-
-
-    @Given("user log in the application using excel manager")
-    public void user_log_in_the_application_using_excel_manager() throws InterruptedException {
-        String path ="./src/test/resources/testdata/smoketestdata.xlsx";
-        String sheetName="manager_login_info";
-        excelUtil= new ExcelUtil(path,sheetName);
-
-        testData=excelUtil.getDataList();
-        System.out.println(testData);//[{password=Techproed123!, username=admin}]
-
-        for(Map<String,String> eachData : testData ){//eachData represent each username-password pairs
-            setUp();//login in each loop
-            loginPage.username.sendKeys(eachData.get("username"));//admin
-            loginPage.password.sendKeys(eachData.get("password"));//Techproed123!
-            loginPage.loginButton.click();
-        }
-    }
+    /*
+     *BELOW CODE IS USED TO LOGIN USING EXCEL SHEET
+     * import ExcelUtil
+     * Delete LoginPage and DefaultPage cause there are already in the top of the page
+     * Delete @Test annotation and adminLoginTest method signature
+     * Add exception to the method signature for setUp method
+     * */
+//    ExcelUtil excelUtil;
+//    List<Map<String, String>>  testData;
+//
+//    public void setUp() throws InterruptedException {
+//        Driver.getDriver().get(ConfigReader.getProperty("app_qa_environment"));
+//        loginPage = new LoginPage();
+//        Thread.sleep(1000);
+//        try{
+//            Thread.sleep(1000);
+//            loginPage.advancedLink.click();
+//            Thread.sleep(1000);
+//            loginPage.proceedLink.click();
+//            Thread.sleep(1000);
+//        }catch (Exception e){
+//            System.out.println("Advanced Link and Proceed Link is not displayed");
+//        }
+//    }
+//
+//    @Given("user log in the application using excel admin")
+//    public void user_log_in_the_application_using_excel_admin() throws InterruptedException {
+//            String path ="./src/test/resources/testdata/smoketestdata.xlsx";
+//            String sheetName="admin_login_info";
+//            excelUtil= new ExcelUtil(path,sheetName);
+//
+//            testData=excelUtil.getDataList();
+//            System.out.println(testData);//[{password=Techproed123!, username=admin}]
+//
+//            for(Map<String,String> eachData : testData ){//eachData represent each username-password pairs
+//                setUp();//login in each loop
+//                loginPage.username.sendKeys(eachData.get("username"));//admin
+//                loginPage.password.sendKeys(eachData.get("password"));//Techproed123!
+//                loginPage.loginButton.click();
+//        }
+//    }
+//
+//
+//    @Given("user log in the application using excel manager")
+//    public void user_log_in_the_application_using_excel_manager() throws InterruptedException {
+//        String path ="./src/test/resources/testdata/smoketestdata.xlsx";
+//        String sheetName="manager_login_info";
+//        excelUtil= new ExcelUtil(path,sheetName);
+//
+//        testData=excelUtil.getDataList();
+//        System.out.println(testData);//[{password=Techproed123!, username=admin}]
+//
+//        for(Map<String,String> eachData : testData ){//eachData represent each username-password pairs
+//            setUp();//login in each loop
+//            loginPage.username.sendKeys(eachData.get("username"));//admin
+//            loginPage.password.sendKeys(eachData.get("password"));//Techproed123!
+//            loginPage.loginButton.click();
+//        }
 
 }

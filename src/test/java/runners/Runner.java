@@ -14,8 +14,9 @@ import org.junit.runner.RunWith;
                 "rerun:target/failedRerun.txt"
         },
         features = "./src/test/resources/features",//MUST
-        glue = "stepdefinitions",//MUST
-        tags = "@excel_automation",//OPTIONAL. WITHOUT TAGS, RUNNER RUNS ALL FEATURES
+        glue = "stepdefinitions",//MUST,
+        tags = "@room_reservation",
+        //tags = "@excel_automation",//OPTIONAL. WITHOUT TAGS, RUNNER RUNS ALL FEATURES
         dryRun = false//OPTIONAL.
         // WITHOUT dryRun(dryRun=false is default,
         // we can not check completion error without seeing the browser

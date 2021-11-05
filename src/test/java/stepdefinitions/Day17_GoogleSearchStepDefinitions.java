@@ -3,6 +3,7 @@ package stepdefinitions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import pages.GooglePage;
 import utilities.ConfigReader;
@@ -18,6 +19,8 @@ public class Day17_GoogleSearchStepDefinitions {
     @Given("user is on the google page")
     public void user_in_on_the_google_page() {
         Driver.getDriver().get(ConfigReader.getProperty("google_url"));
+        Driver.getDriver().findElement(By.xpath("//*[@id='L2AGLb']")).click();
+
     }
 
     @Given("user search for iPhone")
