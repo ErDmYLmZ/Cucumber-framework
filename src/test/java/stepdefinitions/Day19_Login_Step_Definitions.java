@@ -60,7 +60,7 @@ public class Day19_Login_Step_Definitions {
 
     @Given("user enters manager_id and manager_password")
     public void user_enters_manager_id_and_manager_password(DataTable credentials) {
-//        1. Getting teh data as List<String>
+//        1. Getting the data as List<String>
 //        List<String> managerCredentials = credentials.row(0);//Test data is on the first row
 //        System.out.println(managerCredentials);//[manager, Manager1!]
 //        System.out.println(managerCredentials.get(0));//manager
