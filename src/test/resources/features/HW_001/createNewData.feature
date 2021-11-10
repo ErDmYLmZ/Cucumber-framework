@@ -18,8 +18,12 @@ Feature: HomeWork_Create_New_Data
 
 
    Examples: user_data
-     | first_name | last_name   | position | office    | extension | start_date | salary |
-     | Ferdinand  | Nederlander | QA       | Amsterdam | 737       | 2021-02-06 | 80000  |
+     | first_name | last_name | position | office | extension | start_date | salary     |
+     | John       | Walker    | doctor   | LA     | 456       | 2022-10-10 | 78900.000  |
+     | ihsan      | kim       | nurse    | TX     | 899       | 2022-10-11 | 7890000089 |
+     | Jim        | cam       | QA       | AR     | 23462     | 2022-10-12 | 789000006  |
+     | Betty      | york      | lawyer   | NY     | 5613      | 2022-10-13 | 6100000    |
+     | Sue        | Lui       | dev      | CA     | 400       | 2022-10-14 | 10008000   |
 
   @create_new_data_excel
   Scenario: User_can_create_new_data_with_excel
@@ -36,15 +40,27 @@ Feature: HomeWork_Create_New_Data
       Given user go to https://editor.datatables.net/
       Then user clicks on the new button
       And user enters all required fields with data_tables
-        | First name | Last name   | Position | Office    | Extension | Start date | Salary |
-        | Ferdinand  | Nederlander | QA       | Amsterdam | 737       | 2021-02-06 | 80000  |
+        | First name | Last name | Position | Office | Extension | Start date | Salary     |
+        | John       | Walker    | doctor   | LA     | 456       | 2022-10-10 | 78900.000  |
+        | ihsan      | kim       | nurse    | TX     | 899       | 2022-10-11 | 7890000089 |
+        | Jim        | cam       | QA       | AR     | 23462     | 2022-10-12 | 789000006  |
+        | Betty      | york      | lawyer   | NY     | 5613      | 2022-10-13 | 6100000    |
+        | Sue        | Lui       | dev      | CA     | 400       | 2022-10-14 | 10008000   |
       Then user clicks on the create button
       And search for the first_name and last_name
-        | First name | Last name   |
-        | Ferdinand  | Nederlander |
+        | First name | Last name |
+        | John       | Walker    |
+        | ihsan      | kim       |
+        | Jim        | cam       |
+        | Betty      | york      |
+        | Sue        | Lui       |
       Then verify the name fields contains first_name and last_name
-        | First name | Last name   |
-        | Ferdinand  | Nederlander |
+        | First name | Last name |
+        | John       | Walker    |
+        | ihsan      | kim       |
+        | Jim        | cam       |
+        | Betty      | york      |
+        | Sue        | Lui       |
       Then close the application
 
 

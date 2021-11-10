@@ -11,13 +11,11 @@ import pages.DefaultPage;
 import pages.RoomReservationPage;
 
 import java.util.List;
-import java.util.Map;
 
 public class Day20_Room_Reservation_Step_Definitions {
 
     DefaultPage defaultPage = new DefaultPage();
-    RoomReservationPage roomReservationPage = new RoomReservationPage();
-
+    RoomReservationPage roomReservationPage=new RoomReservationPage();
     @Given("user navigates to the create_room_reservation page")
     public void user_navigates_to_the_create_room_reservation_page() {
         defaultPage.hotelManagementLink.click();
@@ -57,54 +55,8 @@ public class Day20_Room_Reservation_Step_Definitions {
         roomReservationPage.contactEmail.sendKeys(testData.get(9));
         //notes
         roomReservationPage.notes.sendKeys(testData.get(10));
+    }
 
-
-         }
-     //    2. Getting the data as List<List<String>>
-//        List<List<String>> userCredentials = roomData.asLists();
-//        for (List<String> eachCredentials : userCredentials) {
-//            if (!eachCredentials.get(0).equals("idUser")) {
-//                Select selectIdUser = new Select(roomReservationPage.idUser);
-//                selectIdUser.selectByVisibleText(eachCredentials.get(0));
-//
-//                Select selectIdHotelRoom = new Select(roomReservationPage.idHotelRoom);
-//                selectIdHotelRoom.selectByVisibleText(eachCredentials.get(1));
-//
-//                roomReservationPage.price.sendKeys(eachCredentials.get(2));
-//                roomReservationPage.dateStart.sendKeys(eachCredentials.get(3));
-//                roomReservationPage.dateEnd.sendKeys(eachCredentials.get(4));
-//                roomReservationPage.adultAmount.sendKeys(eachCredentials.get(5));
-//                roomReservationPage.childrenAmount.sendKeys(eachCredentials.get(6));
-//                roomReservationPage.contactNameSurname.sendKeys(eachCredentials.get(7));
-//                roomReservationPage.contactPhone.sendKeys(eachCredentials.get(8));
-//                roomReservationPage.contactEmail.sendKeys(eachCredentials.get(9));
-//                roomReservationPage.notes.sendKeys(eachCredentials.get(10));
-//
-//
-//            }
-//        }
-//        // 3. List<Map<String,String>>
-//        List<Map<String,String>> userCredentials= roomData.asMaps(String.class,String.class);
-//        for (Map<String,String> eachCredentials:userCredentials){
-//            System.out.println(eachCredentials);
-//
-//            Select selectIdUser = new Select(roomReservationPage.idUser);
-//            selectIdUser.selectByVisibleText(eachCredentials.get("idUser"));
-//
-//            Select selectIdHotelRoom = new Select(roomReservationPage.idHotelRoom);
-//            selectIdHotelRoom.selectByVisibleText(eachCredentials.get("idHotelRoom"));
-//
-//            roomReservationPage.price.sendKeys(eachCredentials.get("price"));
-//            roomReservationPage.dateStart.sendKeys(eachCredentials.get("dateStart"));
-//            roomReservationPage.dateEnd.sendKeys(eachCredentials.get("dateEnd"));
-//            roomReservationPage.adultAmount.sendKeys(eachCredentials.get("adultAmount"));
-//            roomReservationPage.childrenAmount.sendKeys(eachCredentials.get("childrenAmount"));
-//            roomReservationPage.contactNameSurname.sendKeys(eachCredentials.get("contactNameSurname"));
-//            roomReservationPage.contactPhone.sendKeys(eachCredentials.get("contactPhone"));
-//            roomReservationPage.contactEmail.sendKeys(eachCredentials.get("contactEmail"));
-//            roomReservationPage.notes.sendKeys(eachCredentials.get("notes"));
-//        }
-//    }
     @And("user clicks on the approved_checkbox")
     public void user_clicks_on_the_approved_checkbox() {
         roomReservationPage.isApproved.click();
@@ -126,4 +78,4 @@ public class Day20_Room_Reservation_Step_Definitions {
         roomReservationPage.okButton.click();
     }
 
-    }
+}
