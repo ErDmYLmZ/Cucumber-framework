@@ -23,26 +23,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81103430-53fb-4a27-80d0-e75f95e6dc83" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/DataTablesPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/database_step_defs/Create_Step_Definitions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/database_step_defs/Read_Step_Definitions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/homework/DataTablesStepDefs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/homework/StaleException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/selenium_grid_step_defs/Selenium_Grid_Step_Defs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/utilities/DBUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/extent-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/extent.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/database_features/read.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/homework/user_shoould_be_able_to_create_new_data_in_the_applicaiton.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/database_features/create.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/selenium_grid_features/selenium.grid.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/runners/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/Runner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinitions/Day20_Room_Reservation_Step_Definitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/Day20_Room_Reservation_Step_Definitions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinitions/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/Hooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinitions/Hw_Create_New_Data_Step_Definitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/Hw_Create_New_Data_Step_Definitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinitions/database_step_defs/Create_Step_Definitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/database_step_defs/Create_Step_Definitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinitions/database_step_defs/Read_Step_Definitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/database_step_defs/Read_Step_Definitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinitions/selenium_grid_step_defs/Selenium_Grid_Step_Defs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/selenium_grid_step_defs/Selenium_Grid_Step_Defs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/utilities/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utilities/Driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/HW_001/createNewData.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/HW_001/createNewData.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +59,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
@@ -77,35 +68,15 @@
       <recent name="$PROJECT_DIR$/src/test/resources/testdata" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: TC02_Read_hotel_information">
-    <configuration name="Feature: selenium_grid" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.Runner">
+    <configuration name="Feature: selenium.grid" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/selenium_grid_features/selenium_grid.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/selenium_grid_features/selenium.grid.feature" />
       <option name="GLUE" value="stepdefinitions" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="cucumber-framework" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <option name="SUGGESTED_NAME" value="Feature: selenium_grid" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scenario: TC01_Read_hotel_reservation_information" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/database_features/read.feature" />
-      <option name="GLUE" value="stepdefinitions" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="cucumber-framework" />
-      <option name="NAME_FILTER" value="^TC01_Read_hotel_reservation_information$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC01_Read_hotel_reservation_information$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: TC01_Read_hotel_reservation_information" />
+      <option name="SUGGESTED_NAME" value="Feature: selenium.grid" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -137,15 +108,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: verify_title_on_chrome" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: TC_01_Create_Hotel_Record" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/selenium_grid_features/selenium_grid.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/database_features/create.feature" />
       <option name="GLUE" value="stepdefinitions" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="cucumber-framework" />
-      <option name="NAME_FILTER" value="^verify_title_on_chrome$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^verify_title_on_chrome$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: verify_title_on_chrome" />
+      <option name="NAME_FILTER" value="^TC_01_Create_Hotel_Record$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC_01_Create_Hotel_Record$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: TC_01_Create_Hotel_Record" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: verify_title_on_firefox" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/selenium_grid_features/selenium.grid.feature" />
+      <option name="GLUE" value="stepdefinitions" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="cucumber-framework" />
+      <option name="NAME_FILTER" value="^verify_title_on_firefox$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^verify_title_on_firefox$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: verify_title_on_firefox" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -174,11 +165,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Scenario: TC02_Read_hotel_information" />
         <item itemvalue="JUnit.Runner" />
-        <item itemvalue="Cucumber Java.Scenario: TC01_Read_hotel_reservation_information" />
-        <item itemvalue="Cucumber Java.Feature: selenium_grid" />
-        <item itemvalue="Cucumber Java.Scenario: verify_title_on_chrome" />
+        <item itemvalue="Cucumber Java.Feature: selenium.grid" />
+        <item itemvalue="Cucumber Java.Scenario: verify_title_on_firefox" />
+        <item itemvalue="Cucumber Java.Scenario: TC_01_Create_Hotel_Record" />
+        <item itemvalue="Cucumber Java.Scenario: TC02_Read_hotel_information" />
       </list>
     </recent_temporary>
   </component>
